@@ -8,7 +8,7 @@ const LeftArrow = () => {
     const { scrollPrev } = useContext(VisibilityContext)
 
     return (
-        <Flex justify="center" align="center" mr="1">
+        <Flex justify="center" align="center" mr="2">
             <Icon
                 as={FaArrowAltCircleLeft}
                 fontSize="2xl"
@@ -23,7 +23,7 @@ const RightArrow = () => {
     const { scrollNext } = useContext(VisibilityContext)
 
     return (
-        <Flex justify="center" align="center" ml="1">
+        <Flex justify="center" align="center" ml="2">
             <Icon
                 as={FaArrowAltCircleRight}
                 fontSize="2xl"

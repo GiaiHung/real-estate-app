@@ -43,7 +43,7 @@ function Navbar() {
             {isSmallScreen && <Spacer />}
             <Box flex="1">
                 {isSmallScreen ? (
-                    <Box display='flex' justifyContent='flex-end'>
+                    <Box display="flex" justifyContent="flex-end">
                         <Menu>
                             <MenuButton
                                 as={IconButton}
@@ -56,7 +56,9 @@ function Navbar() {
                                     <MenuItem icon={<FcHome />}>Home</MenuItem>
                                 </Link>
                                 <Link href="/search" passHref>
-                                    <MenuItem icon={<BsSearch />}>Search</MenuItem>
+                                    <MenuItem icon={<BsSearch />}>
+                                        Search
+                                    </MenuItem>
                                 </Link>
                                 <Link href="/search?purpose=for-sale" passHref>
                                     <MenuItem icon={<FiKey />}>
@@ -79,9 +81,12 @@ function Navbar() {
                                 fontSize="lg"
                                 color="white"
                                 cursor="pointer"
-                                colorScheme='whatsapp'
-                                variant='outlined'
-                                className={router.pathname === '/' ? 'nav-btn active' : 'nav-btn'}
+                                variant="outlined"
+                                className={
+                                    router.pathname === '/'
+                                        ? 'nav-btn active'
+                                        : 'nav-btn'
+                                }
                             >
                                 Home
                             </Button>
@@ -92,9 +97,13 @@ function Navbar() {
                                 fontSize="lg"
                                 color="white"
                                 cursor="pointer"
-                                colorScheme='whatsapp'
-                                variant='outlined'
-                                className={router.pathname === '/search' && !router.query.purpose ? 'nav-btn active' : 'nav-btn'}
+                                variant="outlined"
+                                className={
+                                    router.pathname === '/search' &&
+                                    !router.query.purpose
+                                        ? 'nav-btn active'
+                                        : 'nav-btn'
+                                }
                             >
                                 Search
                             </Button>
@@ -105,9 +114,12 @@ function Navbar() {
                                 fontSize="lg"
                                 color="white"
                                 cursor="pointer"
-                                colorScheme='whatsapp'
-                                variant='outlined'
-                                className={router.query.purpose === 'for-sale' ? 'nav-btn active' : 'nav-btn'}
+                                variant="outlined"
+                                className={
+                                    router.query.purpose === 'for-sale'
+                                        ? 'nav-btn active'
+                                        : 'nav-btn'
+                                }
                             >
                                 Buy property
                             </Button>
@@ -118,9 +130,12 @@ function Navbar() {
                                 fontSize="lg"
                                 color="white"
                                 cursor="pointer"
-                                colorScheme='whatsapp'
-                                variant='outlined'
-                                className={router.query.purpose === 'for-rent' ? 'nav-btn active' : 'nav-btn'}
+                                variant="outlined"
+                                className={
+                                    router.query.purpose === 'for-rent'
+                                        ? 'nav-btn active'
+                                        : 'nav-btn'
+                                }
                             >
                                 Rent property
                             </Button>

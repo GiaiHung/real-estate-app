@@ -33,9 +33,10 @@ function PropertyDetails({
 
             {/* Content */}
             <Flex paddingTop="2" align="center" justify="space-between">
+                {/* Heading */}
                 <Flex align="center" justify="center">
                     <Box paddingRight="3" color="green.300">
-                        {isVerified && <GoVerified />}
+                        {isVerified && <GoVerified style={{ fontSize: '1.5rem' }} />}
                     </Box>
                     <Text fontWeight="bold" fontSize="2xl">
                         AED {millify(price)}
@@ -48,7 +49,7 @@ function PropertyDetails({
                     width="250px"
                     color="blue.400"
                     marginY="4"
-                    fontSize='xl'
+                    fontSize="xl"
                 >
                     <Flex align="center" gap=".5rem">
                         {rooms} <FaBed />
@@ -71,6 +72,7 @@ function PropertyDetails({
                 </Box>
             </Flex>
 
+            {/* Title and description */}
             <Box mt="2">
                 <Text fontSize="xl" fontWeight="bold">
                     {title.toUpperCase()}
@@ -85,6 +87,8 @@ function PropertyDetails({
                     }}
                 ></p>
             </Box>
+
+            {/* Table */}
             <Flex
                 flexWrap="wrap"
                 gap=".5rem"
@@ -124,6 +128,34 @@ function PropertyDetails({
                     </Flex>
                 )}
             </Flex>
+
+            {/* Amenities */}
+            <Box>
+                {amenities && (
+                    <Text fontSize="xl" fontWeight="bold" marginY="5">
+                        Facilities:
+                    </Text>
+                )}
+                <Flex wrap="wrap">
+                    {amenities?.map((item) =>
+                        item?.amenities?.map((amenity) => (
+                            <Text
+                                key={amenity.text}
+                                fontSize="lg"
+                                fontWeight="bold"
+                                color="blue.400"
+                                backgroundColor="gray.200"
+                                borderRadius="4"
+                                p="2"
+                                marginY="1"
+                                mr='2'
+                            >
+                                {amenity.text}
+                            </Text>
+                        ))
+                    )}
+                </Flex>
+            </Box>
         </Box>
     )
 }
