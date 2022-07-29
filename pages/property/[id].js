@@ -32,17 +32,31 @@ function PropertyDetails({
             {photos && <ImageScrollbar data={photos} />}
 
             {/* Content */}
-            <Flex paddingTop="2" align="center" justify="space-between">
+            <Flex
+                paddingTop="2"
+                align="center"
+                justify="space-between"
+                wrap="wrap"
+            >
                 {/* Heading */}
                 <Flex align="center" justify="center">
                     <Box paddingRight="3" color="green.300">
-                        {isVerified && <GoVerified style={{ fontSize: '1.5rem' }} />}
+                        {isVerified && (
+                            <GoVerified style={{ fontSize: '1.5rem' }} />
+                        )}
                     </Box>
-                    <Text fontWeight="bold" fontSize="2xl">
+                    <Text fontWeight="bold" fontSize="lg">
                         AED {millify(price)}
                         {rentFrequency && `/${rentFrequency}`}
                     </Text>
                 </Flex>
+                <Box>
+                    <Avatar
+                        name={agency?.name}
+                        src={agency?.logo?.url}
+                        size="sm"
+                    />
+                </Box>
                 <Flex
                     align="center"
                     justify="space-between"
@@ -63,13 +77,6 @@ function PropertyDetails({
                         {millify(area)} sqft <BsGridFill />
                     </Flex>
                 </Flex>
-                <Box>
-                    <Avatar
-                        name={agency?.name}
-                        src={agency?.logo?.url}
-                        size="md"
-                    />
-                </Box>
             </Flex>
 
             {/* Title and description */}
@@ -148,7 +155,7 @@ function PropertyDetails({
                                 borderRadius="4"
                                 p="2"
                                 marginY="1"
-                                mr='2'
+                                mr="2"
                             >
                                 {amenity.text}
                             </Text>
