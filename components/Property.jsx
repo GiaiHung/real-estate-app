@@ -33,6 +33,7 @@ function Property({
                 justify="flex-start"
                 cursor="pointer"
             >
+                {/* Image */}
                 <Box>
                     <Image
                         src={coverPhoto ? coverPhoto.url : DefaultImage}
@@ -41,7 +42,10 @@ function Property({
                         alt="house"
                     />
                 </Box>
+
+                {/* Content */}
                 <Box w="full">
+                    {/* Header */}
                     <Flex paddingTop="2" align="center" justify="space-between">
                         <Flex align="center">
                             <Box paddingRight="3" color="green.300">
@@ -60,6 +64,8 @@ function Property({
                             />
                         </Box>
                     </Flex>
+
+                    {/* Icon description and title */}
                     <Flex
                         align="center"
                         justify="space-between"

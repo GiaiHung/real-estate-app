@@ -12,6 +12,7 @@ import Property from '../components/Property'
 function Search({ properties }) {
     const [searchFilters, setSearchFilters] = useState(false)
     const router = useRouter()
+    
     return (
         <Box>
             {/* Toggle filter */}

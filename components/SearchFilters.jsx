@@ -1,4 +1,4 @@
-import { Flex, Select, Box, Button } from '@chakra-ui/react'
+import { Flex, Select, Box } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
 
 import { filterData, getFilterValues } from '../utils/filterData'

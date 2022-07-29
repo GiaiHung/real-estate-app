@@ -84,15 +84,7 @@ function PropertyDetails({
                 <Text fontSize="xl" fontWeight="bold">
                     {title.toUpperCase()}
                 </Text>
-                <p
-                    dangerouslySetInnerHTML={{ __html: description }}
-                    style={{
-                        padding: '1rem 0',
-                        fontSize: '1rem',
-                        color: '#4A5568',
-                        lineHeight: '2',
-                    }}
-                ></p>
+                <Text marginY='4' lineHeight='2' color='gray.600'>{description}</Text>
             </Box>
 
             {/* Table */}

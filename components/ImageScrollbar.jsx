@@ -48,9 +48,8 @@ function ImageScrollbar({ data }) {
                         blurDataURL={item.url}
                         src={item.url}
                         alt={item.title}
-                        width="1000"
-                        height="500"
-                        sizes="(max-width: 500px): 200px (max-width: 800px): 300px, 1000px"
+                        width='1000'
+                        height='500'
                     />
                 </Box>
             ))}
